@@ -21,10 +21,22 @@ function runLoops(event) {
         "while-loop"    ==>  runWhileLoop()
         "do-while-loop" ==>  runDoWhileLoop()
     */
+    let x = "for-loop"
+    let y = "while-loop"
+    let z = "do-while-loop"
 
-
-
-
+    if(selectedLoop === x)
+    {
+        runForLoop()
+    }
+    else if (selectedLoop === y)
+    {
+        runWhileLoop()
+    }
+    else if(selectedLoop === z)
+    {
+        runDoWhileLoop()
+    }
 
 }
 
@@ -45,9 +57,13 @@ function runWhileLoop() {
 
         $("div#while-result").append(...);
     */
+    let whileNum = 0;
+    while(whileNum < number)
+    {
+        output = $("div#while-result").append("A");
+        whileNum++;
+    }
 
-
-    $("div#while-result").text(output);
 }
 
 
@@ -59,6 +75,12 @@ function runForLoop() {
         Use a for loop to add the numbers 1 through "number"
         into the variable "sum". Output the sum to the div.
     */
+
+    for(let forNum = 0; forNum <= number; forNum++)
+    {
+     sum = sum + forNum;
+    }
+
 
     $("div#for-result").text(sum);
 }
@@ -77,7 +99,11 @@ function runDoWhileLoop() {
 
         $("div#do-while-result").append(...);
     */
-
-
+    let doWhileNum = 0;
+    do
+    {
+        $("div#do-while-result").append(`${doWhileNum + 1}`);
+        doWhileNum++;
+    } while(doWhileNum < number);
 
 }

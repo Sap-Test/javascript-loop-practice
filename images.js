@@ -22,10 +22,12 @@ function runLoops() {
 
         addImageToDiv("#while-loop");
     */
-
-
-
-
+        let whileNum = 0;
+        while(whileNum < num+1)
+        {
+            addImageToDiv("#while-loop");
+            whileNum++;
+        }
 
     /*
      Create a do-while loop that runs "num - 1" times.
@@ -34,10 +36,12 @@ function runLoops() {
 
         addImageToDiv("#do-while-loop");
     */
+        let doWhileNum = 0;
+        do{
+            addImageToDiv("#do-while-loop");
+            doWhileNum++;
 
-
-
-
+        }while(doWhileNum < num-1)
 
     /*
      Create a for loop that runs exactly "num" times.
@@ -47,9 +51,10 @@ function runLoops() {
         addImageToDiv("#for-loop");
     */
 
-
-
-
+    for(let forNum = 0; forNum < num; forNum++)
+    {
+        addImageToDiv("#for-loop");
+    }
 
 }
 
